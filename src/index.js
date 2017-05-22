@@ -9,6 +9,12 @@ const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware({})}>
-
+    <div>
+      <Switch>
+        <Route path="/posts/new" component={PostsNew} />
+        <Route path="/posts/:id" component={ShowPosts} />
+        <Route path="/" component={PostsIndex} />
+      </Switch>
+    </div>
   </Provider>
   , document.querySelector('.container'));
