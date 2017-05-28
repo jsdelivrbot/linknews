@@ -10,13 +10,15 @@ import reducers from './reducers';
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
-  <Provider store={createStoreWithMiddleware({reducers})}>
-    <div>
-      <Switch>
-        <Route path="/posts/new" component={PostsNew} />
-        <Route path="/posts/:id" component={ShowPosts} />
-        <Route path="/" component={PostsIndex} />
-      </Switch>
-    </div>
+  <Provider store={createStoreWithMiddleware(reducers)}>
+    <BrowserRouter>
+      <div>
+        <Switch>
+          <Route path="/posts/new" component={PostsNew} />
+          <Route path="/posts/:id" component={ShowPosts} />
+          <Route path="/" component={PostsIndex} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   </Provider>
   , document.querySelector('.container'));
