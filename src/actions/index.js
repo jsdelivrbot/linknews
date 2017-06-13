@@ -29,6 +29,7 @@ export function createPost(values, callback) {
 }
 
 export function fetchPost(id) {
+  //Setting the GET request to the URL of the server
   const request = axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`);
 
   return {
