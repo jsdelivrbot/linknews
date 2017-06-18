@@ -7,7 +7,17 @@ import { createPost } from '../actions';
 class PostsNew extends Component {
   render() {
     return (
-      <div>This is the PostsNew form.</div>
+      <form>
+        <Field
+          label="Title for post"
+          name="title"/>
+        <Field
+          label="Categories"
+          name="categories"/>
+        <Field
+          label="Post Blog"
+          name="content"/>
+      </form>
     );
   }
 }
