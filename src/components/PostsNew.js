@@ -41,13 +41,16 @@ class PostsNew extends Component {
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
           label="Title for post"
-          name="title"/>
+          name="title"
+          component={this.renderField}/>
         <Field
           label="Categories"
-          name="categories"/>
+          name="categories"
+          component={this.renderField}/>
         <Field
           label="Post Blog"
-          name="content"/>
+          name="content"
+          component={this.renderField}/>
       </form>
     );
   }
