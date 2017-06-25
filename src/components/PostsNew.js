@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import { createPost } from '../actions';
 
 class PostsNew extends Component {
+   //The field argument is responsible for letting the Field component know that it is responsible for the input jsx.
+  //renderTitleField does not know that it correspond with Field component.
    renderField(field) {
     const  { meta: { touched, error } } = field;
     const className = `form-group ${touched && error ? 'has-danger' : ''}`;
