@@ -69,6 +69,7 @@ class PostsNew extends Component {
       errors.categories = "Enter some categories";
     }
 
+    //Checks to see if any content is created in the field
     if (!values.content) {
       errors.content = "Enter some content";
     }
