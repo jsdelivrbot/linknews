@@ -80,3 +80,11 @@ class PostsNew extends Component {
     return errors;
   }
 }
+
+export default reduxForm({
+  validate,
+  form: 'PostsNewForm'
+})(
+  //createPost becomes the mapStateToProps
+  connect(null,{ createPost })(PostsNew) //This is how we stack many connect-like helper functions.
+);
