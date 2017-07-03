@@ -21,6 +21,7 @@ class ShowPosts extends Component {
   }
 }
 
+//Making post an application state. Will be available as this.props.post
 function mapStateToProps({ posts }, ownProps) {
   return { post: posts[ownProps.match.params.id] };
 }
