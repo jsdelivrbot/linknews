@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 class ShowPosts extends Component {
   componentDidMount() {
-    if (!this.props.post) {
+    if (!this.props.post) { //this.props.post was accessed from mapStateToProps
       const { id } = this.props.match.params; //This is provided by React Router
       this.props.fetchPost(id);
     }
