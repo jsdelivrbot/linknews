@@ -38,3 +38,13 @@ export function fetchPost(id) {
   }
 }
 
+
+export function deletePost(id, callback) {
+  const request = axios.delete(`${ROOT_URL}/posts/${id}${API_KEY}`)
+    .then(() => callback());
+
+  return {
+    type: DELETE_POST,
+    payload: id //We are deleting just the post associated with the id we don't need to go on the application state level. So payload is not request.
+  }
+}
