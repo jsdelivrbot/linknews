@@ -13,7 +13,6 @@ class PostsNew extends Component {
 
     return (
       <div className={className}>
-        {/*field.label is targetting the label prop of the Field component. By doing this way, we don't have to repeat ourselves and make different method for each.*/}
         <label>{field.label}</label>
         <input
           className="form-control"
