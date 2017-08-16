@@ -12,7 +12,9 @@ class PostsIndex extends Component {
   render() {
     return (
       <div>
-        <h3>Posts</h3>
+        <div className="text-xs-right">
+          <h3>Posts</h3>
+        </div>
       </div>
     );
   }
