@@ -9,6 +9,8 @@ class PostsIndex extends Component {
     this.props.fetchPosts();
   }
 
+  renderPost() {}
+
   render() {
     return (
       <div>
