@@ -9,7 +9,15 @@ class PostsIndex extends Component {
     this.props.fetchPosts();
   }
 
-  renderPost() {}
+  renderPost() {
+    return (
+      <li className="list-group-item" key={post.id}>
+        <Link to={`/posts/${post.id}`}>
+          {post.title}
+        </Link>
+      </li>
+    );
+  }
 
   render() {
     return (
