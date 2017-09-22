@@ -29,6 +29,9 @@ class PostsIndex extends Component {
             Add a Post
           </Link>
           <h3>Posts</h3>
+          <ul>
+            {this.renderPost()}
+          </ul>
         </div>
       </div>
     );
