@@ -42,4 +42,4 @@ function mapStateToProps(state) {
   return { posts: state.posts };
 }
 
-function mapDispatchToProps(dispatch) {};
+export default connect(null, {fetchPosts: fetchPosts})(PostsIndex);
